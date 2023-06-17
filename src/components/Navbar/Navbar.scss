@@ -1,0 +1,43 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+
+    .container-fluid {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            gap: 12px;
+
+            .nav-item {
+                a {
+                    color: #333333;
+                    text-decoration: inherit;
+                }
+            }
+        }
+
+    }
+
+    .container-cart{
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        .btn-cart{
+            background-color: transparent;
+            border: none;
+            
+            cursor: pointer;
+        }
+
+        .avatar{
+            height: 40px;
+            width: 40px;
+            object-fit: contain;
+        }
+    }
+}
