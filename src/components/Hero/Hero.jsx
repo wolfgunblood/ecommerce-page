@@ -10,10 +10,10 @@ const Hero = () => {
           <img src={Product1} alt="Product" />
         </div>
         <ul className='image-list'>
-          <li className='image-list-item'><img src={Thumb1} alt="Thumbnail" /></li>
-          <li className='image-list-item'><img src={Thumb2} alt="Thumbnail" /></li>
-          <li className='image-list-item'><img src={Thumb3} alt="Thumbnail" /></li>
-          <li className='image-list-item'><img src={Thumb4} alt="Thumbnail" /></li>
+          <li className='image-list-item' id='one'><img src={Thumb1} alt="Thumbnail" /></li>
+          <li className='image-list-item' id='two'><img src={Thumb2} alt="Thumbnail" /></li>
+          <li className='image-list-item' id='three'><img src={Thumb3} alt="Thumbnail" /></li>
+          <li className='image-list-item' id='four'><img src={Thumb4} alt="Thumbnail" /></li>
         </ul>
       </div>
       <div className='product-details-container'>
