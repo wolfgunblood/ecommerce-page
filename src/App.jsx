@@ -7,8 +7,8 @@ import Modal from './components/Modal/Modal';
 const App = () => {
   return (
     <div className="app-container">
-      {/* <Navbar /> */}
-      {/* <Hero /> */}
+      <Navbar />
+      <Hero />
       <Modal />
     </div>
   )

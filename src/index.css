@@ -11,11 +11,15 @@
   -webkit-text-size-adjust: 100%;
 }
 
+*{
+  box-sizing: border-box;
+}
 
 
 body {
   background-color: hsl(0, 0%, 100%);
   margin: 0;
   min-height: 100vh;
+  /* overflow: hidden; */
 }
 
