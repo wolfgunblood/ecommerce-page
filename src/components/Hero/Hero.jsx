@@ -7,6 +7,8 @@ const Hero = ({ isOpen, setIsOpen }) => {
 
 const [mainImg, setMainImg] = useState(Product1);
 
+const [quantity, setQuantity] = useState(0);
+
 const handleMain = (e) => {
   const id = e.target.id;
   
@@ -22,7 +24,20 @@ const handleMain = (e) => {
     setMainImg(Product4)
   }
 }
+const addItem = () => {
+  setQuantity(quantity + 1)
 
+}
+
+const removeItem = () => {
+  if(quantity === 0){
+    return ;
+  }
+  if(quantity > 0){
+    setQuantity(quantity - 1)
+  }
+
+}
   
 
 
@@ -50,9 +65,9 @@ const handleMain = (e) => {
         </div>
         <div className='product-details-container-bottom'>
           <div className='counter'>
-            <button className='counter-button'><img src={Minus} alt="Minus" /></button>
-            <p className='counter-number'>0</p>
-            <button className='counter-button'><img src={Plus} alt="Plus" /></button>
+            <button className='counter-button' onClick={removeItem}><img src={Minus} alt="Minus" /></button>
+            <p className='counter-number'>{quantity}</p>
+            <button className='counter-button' onClick={addItem}><img src={Plus} alt="Plus" /></button>
           </div>
           <button className='add-to-cart-button'>
             {/* <img src={Cart} alt="Cart" /> */}
