@@ -1,20 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Hero.scss";
-import { Product1, Thumb1, Thumb2, Thumb3, Thumb4, Plus, Minus, Cart } from '../../assets/images'
+import { Product1,Product2,Product3,Product4, Thumb1, Thumb2, Thumb3, Thumb4, Plus, Minus, Cart } from '../../assets/images'
 import { CartIcon } from '../Icons/Icon';
 
-const Hero = ({isOpen, setIsOpen}) => {
+const Hero = ({ isOpen, setIsOpen }) => {
+
+const [mainImg, setMainImg] = useState(Product1);
+
+const handleMain = (e) => {
+  const id = e.target.id;
+  
+  // console.log(id)
+
+  if(id === 'one'){
+    setMainImg(Product1)
+  }else if (id === 'two'){
+    setMainImg(Product2)
+  }else if (id === 'three'){
+    setMainImg(Product3)
+  }else if (id === 'four'){
+    setMainImg(Product4)
+  }
+}
+
+  
+
+
   return (
     <div className='hero-container'>
       <div className='product-image-container'>
-        <button className='main-image'  onClick={() => setIsOpen(true)}>
-          <img src={Product1} alt="Product" />
+        <button className='main-image' onClick={() => setIsOpen(true)}>
+          <img src={mainImg} alt="Product" />
         </button>
         <ul className='image-list'>
-          <li className='image-list-item' id='one'><img src={Thumb1} alt="Thumbnail" /></li>
-          <li className='image-list-item' id='two'><img src={Thumb2} alt="Thumbnail" /></li>
-          <li className='image-list-item' id='three'><img src={Thumb3} alt="Thumbnail" /></li>
-          <li className='image-list-item' id='four'><img src={Thumb4} alt="Thumbnail" /></li>
+          <li className='image-list-item'  onClick={handleMain}><img src={Thumb1} id='one' alt="Thumbnail" /></li>
+          <li className='image-list-item'  onClick={handleMain}><img src={Thumb2} id='two' alt="Thumbnail" /></li>
+          <li className='image-list-item'  onClick={handleMain}><img src={Thumb3} id='three' alt="Thumbnail" /></li>
+          <li className='image-list-item'  onClick={handleMain}><img src={Thumb4} id='four' alt="Thumbnail" /></li>
         </ul>
       </div>
       <div className='product-details-container'>
@@ -36,7 +58,7 @@ const Hero = ({isOpen, setIsOpen}) => {
             {/* <img src={Cart} alt="Cart" /> */}
             <CartIcon class="fill-white" />
             Add to cart
-            </button>
+          </button>
         </div>
       </div>
     </div>
