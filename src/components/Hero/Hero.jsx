@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Hero.scss";
 import { Product1, Thumb1, Thumb2, Thumb3, Thumb4, Plus, Minus, Cart } from '../../assets/images'
+import { CartIcon } from '../Icons/Icon';
 
 const Hero = () => {
   return (
@@ -32,7 +33,8 @@ const Hero = () => {
             <button className='counter-button'><img src={Plus} alt="Plus" /></button>
           </div>
           <button className='add-to-cart-button'>
-            <img src={Cart} alt="Cart" />
+            {/* <img src={Cart} alt="Cart" /> */}
+            <CartIcon class="fill-white" />
             Add to cart
             </button>
         </div>
