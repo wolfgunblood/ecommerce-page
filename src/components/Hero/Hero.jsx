@@ -3,13 +3,13 @@ import "./Hero.scss";
 import { Product1, Thumb1, Thumb2, Thumb3, Thumb4, Plus, Minus, Cart } from '../../assets/images'
 import { CartIcon } from '../Icons/Icon';
 
-const Hero = () => {
+const Hero = ({isOpen, setIsOpen}) => {
   return (
     <div className='hero-container'>
       <div className='product-image-container'>
-        <div className='main-image'>
+        <button className='main-image'  onClick={() => setIsOpen(true)}>
           <img src={Product1} alt="Product" />
-        </div>
+        </button>
         <ul className='image-list'>
           <li className='image-list-item' id='one'><img src={Thumb1} alt="Thumbnail" /></li>
           <li className='image-list-item' id='two'><img src={Thumb2} alt="Thumbnail" /></li>

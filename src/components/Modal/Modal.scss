@@ -18,12 +18,17 @@
         gap: 12px;
         position: relative;
 
-        .close {
+        .close-container {
             position: absolute;
             top: -20px;
             right: 0;
             color: hsl(223, 64%, 98%);
             z-index: 4;
+
+            border: none;
+            outline: none;
+            background-color: transparent;
+            cursor: pointer;
         }
 
         .next-container,
