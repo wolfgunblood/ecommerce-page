@@ -6,6 +6,8 @@ import Modal from './components/Modal/Modal';
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [quantity, setQuantity] = useState(0);
+
   // const toggle = () => {
   //   setIsOpen(!isOpen);
   // }
@@ -14,7 +16,7 @@ const App = () => {
   return (
     <div className="app-container">
       <Navbar />
-      <Hero isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Hero isOpen={isOpen} setIsOpen={setIsOpen} quantity={quantity} setQuantity={setQuantity} />
       {isOpen && <Modal isOpen={isOpen} setIsOpen={setIsOpen} />}
     </div>
   )

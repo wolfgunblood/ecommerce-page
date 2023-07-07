@@ -3,11 +3,10 @@ import "./Hero.scss";
 import { Product1,Product2,Product3,Product4, Thumb1, Thumb2, Thumb3, Thumb4, Plus, Minus, Cart } from '../../assets/images'
 import { CartIcon } from '../Icons/Icon';
 
-const Hero = ({ isOpen, setIsOpen }) => {
+const Hero = ({ isOpen, setIsOpen,quantity,setQuantity }) => {
 
 const [mainImg, setMainImg] = useState(Product1);
 
-const [quantity, setQuantity] = useState(0);
 
 const handleMain = (e) => {
   const id = e.target.id;

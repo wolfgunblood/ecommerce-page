@@ -2,6 +2,9 @@
     display: flex;
     justify-content: space-between;
 
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid #c5c3c3;
+
     .container-fluid {
         display: flex;
         align-items: center;
@@ -10,13 +13,19 @@
         .nav-list {
             list-style: none;
             display: flex;
-            gap: 12px;
+            gap: 24px;
 
             .nav-item {
                 a {
                     color: #333333;
                     text-decoration: inherit;
                 }
+
+                &:hover{
+                    border-bottom: hsl(26, 100%, 55%);
+                }
+            
+
             }
         }
 
