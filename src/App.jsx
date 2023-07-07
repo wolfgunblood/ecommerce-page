@@ -15,7 +15,7 @@ const App = () => {
   // console.log(isOpen);
   return (
     <div className="app-container">
-      <Navbar />
+      <Navbar quantity={quantity} setQuantity={setQuantity} />
       <Hero isOpen={isOpen} setIsOpen={setIsOpen} quantity={quantity} setQuantity={setQuantity} />
       {isOpen && <Modal isOpen={isOpen} setIsOpen={setIsOpen} />}
     </div>

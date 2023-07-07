@@ -4,7 +4,7 @@ import Logo from "../../assets/images/logo.svg";
 import Cart from "../../assets/images/icon-cart.svg"
 import Avatar from "../../assets/images/image-avatar.png"
 import Dropdown from '../Dropdown/Dropdown';
-const Navbar = () => {
+const Navbar = ({quantity}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = () => {
@@ -24,7 +24,7 @@ const Navbar = () => {
       </div>
       <div className='container-cart'>
         <button className='btn-cart' onClick={toggleOpen}><img src={Cart} alt="Cart" /></button>
-        {isOpen && <Dropdown /> }
+        {isOpen && <Dropdown quantity={quantity} /> }
         <img src={Avatar} alt="Avatar" className='avatar' />
       </div>
     </nav>

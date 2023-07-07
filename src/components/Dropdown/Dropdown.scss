@@ -22,6 +22,10 @@
 
         .dropdown-title {
             margin: 0;
+            color: hsl(220, 13%, 13%);
+            font-weight: 800;
+            font-size: 18px;
+
         }
     }
 
@@ -31,6 +35,12 @@
         align-items: center;
         gap: 7px;
 
+        .remove-icon{
+            height: 30px;
+            width: 20px;
+            object-fit: contain;
+        }
+
         // justify-content: space-between;
         .thumbnail-cart {
             height: 40px;
@@ -38,24 +48,33 @@
             object-fit: contain;
         }
         .dropdown-content-details{
+            // width: 100%;
             display: flex;
             flex-direction: column;
+            gap: 7px;
             .dropdown-content {
+                width:max-content;
                 margin: 0;
                 // padding: 0;
                 font-size: 14px;
                 // text-align: center;
-                
+                color: hsl(220, 14%, 75%);
             }
             
             .cart-price {
                 font-size: 14px;
                 margin: 0;
+                color: hsl(220, 14%, 75%);
+                font-weight: 600;
+                letter-spacing: -0.05em;
                 
                 .total {
                     font-size: 14px;
                     // font-family: ;
                     font-weight: 800;
+                    color: hsl(220, 13%, 13%);
+                    letter-spacing: none;
+
                 }
             }
         }
