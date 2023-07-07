@@ -49,6 +49,12 @@
             height: 40px;
             width: 40px;
             object-fit: contain;
+            border-radius: 50%;
+
+            &:hover{
+                outline: 2px solid hsl(26, 100%, 55%);
+                cursor: pointer;
+            }
         }
     }
 }
